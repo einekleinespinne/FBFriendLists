@@ -159,32 +159,7 @@
 					a++;
 				}
 
-				//ts
-				$(".sortFB").sortable({
-					connectWith:".connectSort",
-					tolerance: "pointer"
-				});//make those uls sortable
 				
-				$(".sortGroup").sortable({
-					connectWith:".dealGroup",
-					tolerance: "pointer",
-					receive: function(event, ui) {
-						var warning = window.confirm("Are you sure to remove this friend list, this will remove the real list in the facebook and cannot be recovered.");
-						if(warning){
-							var $item = $( this );
-							
-							$item.find("div").remove();
-							
-						}else{
-							var $item = $( this );
-							
-							$item.find("div").remove();
-							
-						}
-					}
-				});//make those uls sortable
-
-				//ts
 				getMembers(num+1);
 				
 			}
